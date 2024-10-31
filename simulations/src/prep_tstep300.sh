@@ -54,7 +54,7 @@ export EC_MPI_ATEXIT=0
 # ----------------------
 
 # directories
-BASEDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys
+BASEDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations
 COUPLINGDIR=${BASEDIR}/coupling
 NAMEDIR=${BASEDIR}/name
 WORKDIR=${BASEDIR}/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/prep/work

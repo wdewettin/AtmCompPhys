@@ -66,9 +66,9 @@ NAM927_SFX=$NAMEDIR/name.e927.sfx
 NAM927_LVL=$NAMEDIR/BE40a_l_46l
 
 # data directories and clim files
-CLIM_TRG=${BASEDIR}/clim/BE40a_l/Const.Clim.
+CLIM_TRG=${BASEDIR}/clim/BE40a_l_noTEB/Const.Clim.
 CLIM_LBC=${BASEDIR}/clim/EUCO25/Const.Clim.
-PGDFILE=${BASEDIR}/clim/BE40a_l/PGD.fa
+PGDFILE=${BASEDIR}/clim/BE40a_l_noTEB/PGD.fa
 DATADIR_RRTM=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/DYDOCASE/runs/data/RRTM
 DATADIR_ECOCLIMAP=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/PGD-clim-Tier1/climake/data/ecoclimap.covers.param.05
 
