@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RUNSDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/runs
+RUNSDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/runs
 cd $RUNSDIR
 RUNS=$(ls -d *)
 for RUNDIR in $RUNS
@@ -10,9 +10,9 @@ RUNNAME=${RUNDIRPARTS[1]}
 RSTART=${RUNDIRPARTS[2]}
 NHOURS=${RUNDIRPARTS[3]}
 
-SRCDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/src
-RUNSRCDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/src
-LOGDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/log
+SRCDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/src
+RUNSRCDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/src
+LOGDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/log
 TEMPLATE=${SRCDIR}/regridding_all.sh
 
 mkdir -p ${RUNSRCDIR}

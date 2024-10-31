@@ -3,7 +3,7 @@ import fnmatch
 import xarray as xr
 
 # Define the base directory to search from
-base_dir = "/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/runs"
+base_dir = "/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/runs"
 
 # Loop through the directory tree
 for root, dirs, files in os.walk(base_dir):

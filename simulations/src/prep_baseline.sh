@@ -251,5 +251,5 @@ cp ELSCFABOFALBC* ICMSHABOFINIT.sfx Const.Clim.sfx ecoclimap* ${SAVEDIR}/${YYYY}
 # Delete workdir
 rm -rv $WORKDIR
 
-cd /dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/src
+cd /dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/src
 ./kick_run.sh $RUNNAME $RSTART $NHOURS

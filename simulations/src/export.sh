@@ -26,8 +26,8 @@ RUNNAME={runname}
 RSTART={rstart}
 NHOURS={nhours}
 
-SRCDIR=/dodrio/scratch/users/vsc45263/wout/CompPhys/src
-WORKDIR=/dodrio/scratch/users/vsc45263/wout/CompPhys/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/work_export
+SRCDIR=/dodrio/scratch/users/vsc45263/wout/CompPhys/simulations/src
+WORKDIR=/dodrio/scratch/users/vsc45263/wout/CompPhys/simulations/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/work_export
 
 mkdir -p $WORKDIR
 rm -v ${WORKDIR}/*

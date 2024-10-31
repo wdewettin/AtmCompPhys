@@ -19,8 +19,8 @@ TSTART={tstart}
 TSTOP={tstop}
 TSTEP={tstep}
 
-GRIDDIR=/dodrio/scratch/users/vsc45263/wout/CompPhys/src/grids
-INPUTDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/export/${VARNAME}
+GRIDDIR=/dodrio/scratch/users/vsc45263/wout/CompPhys/simulations/src/grids
+INPUTDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/export/${VARNAME}
 
 cd $INPUTDIR
 
