@@ -22,7 +22,8 @@ for INPUTDIR in $INPUTDIRS
 do 
 cd $INPUTDIR
 
-INPUTFILES=$(ls ${RUNNAME}_${RSTART}_${NHOURS}_*)
+# Hard-code timestep!
+INPUTFILES=$(ls ${RUNNAME}_${RSTART}_${NHOURS}_*3600.nc)
 
 for INPUTFILE in $INPUTFILES
 do
