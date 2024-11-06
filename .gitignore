@@ -5,3 +5,4 @@ simulations/coupling
 simulations/runs
 simulations/log
 doc/LandPrepSurfex_userguide_Amber.pdf
+*.nc
