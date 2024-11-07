@@ -6,7 +6,7 @@ import xarray as xr
 
 ### Define parameters ###
 
-cf_var_name_list = ["tas", "pr", "tasmax", "tasmin"] # ["clc", "clh", "cll", "clm", "clt", "evspsbl", "hurs", "huss", "pr", "ps", "rlds", "rsds", "rsdsdiff", "sfcWind", "tas", "tasmax", "tasmin", "uas", "vas"] # Variables to process
+cf_var_name_list = ["tas", "pr", "tasmax", "tasmin", "hfls", "hfss", "mrso", "ts", "rnetds"] # ["clc", "clh", "cll", "clm", "clt", "evspsbl", "hurs", "huss", "pr", "ps", "rlds", "rsds", "rsdsdiff", "sfcWind", "tas", "tasmax", "tasmin", "uas", "vas"] # Variables to process
 fullpos_cf_var_name_list = [] # ["ua700", "va700"] # ["psl"]
 run_name = sys.argv[1]
 rstart = sys.argv[2]
