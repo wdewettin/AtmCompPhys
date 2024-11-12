@@ -6,9 +6,15 @@ import xarray as xr
 
 ### Define parameters ###
 
-cf_var_name_list = ["tas", "pr", "tasmax", "tasmin", "hfls", "hfss", "mrso", "ts", "rnetds"] # ["clc", "clh", "cll", "clm", "clt", "evspsbl", "hurs", "huss", "pr", "ps", "rlds", "rsds", "rsdsdiff", "sfcWind", "tas", "tasmax", "tasmin", "uas", "vas"] # Variables to process
-fullpos_cf_var_name_list = [] # ["ua700", "va700"] # ["psl"]
 run_name = sys.argv[1]
+cf_var_name_list = ["tas", "pr", "tasmax", "tasmin", "hfls", "hfss", "mrso", "ts", "rnetds", "tsl1", "tsl2", "mrsol1", "mrsol2", "mrsol3", "mrsfl1", "mrsfl2", "gflux"]
+teb_var_name_list = ["troad1"]
+if run_name not in ["noTEB", "initSFXnoTEB"]:
+    cf_var_name_list += teb_var_name_list
+print(cf_var_name_list)
+
+# ["clc", "clh", "cll", "clm", "clt", "evspsbl", "hurs", "huss", "pr", "ps", "rlds", "rsds", "rsdsdiff", "sfcWind", "tas", "tasmax", "tasmin", "uas", "vas"] # Variables to process
+fullpos_cf_var_name_list = [] # ["ua700", "va700"] # ["psl"]
 rstart = sys.argv[2]
 nhours = int(sys.argv[3])
 
@@ -22,8 +28,8 @@ netcdf_dir = f"/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45
 cf_dir = f"/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/runs/run_{run_name}_{rstart}_{nhours}/export" # Directory to store the final processed CF-compliant output
 rbin = "/readonly/dodrio/apps/RHEL8/zen2-ib/software/R/4.2.1-foss-2022a/lib64/R/bin" # Optional: define the R bin directory to speed up the program
 tree = True # Optional: organisational parameter to determine wheter to use a structure with subdirectories in the intermediate folders (i.e. a tree) or not
-cf_data_path = "/dodrio/scratch/users/vsc45263/wout/readFA_dev/data/ALARO_SURFEX_CF_variables.yml" # Path to the file containing the information about the CF-variables
-global_attrs_path = "/dodrio/scratch/users/vsc45263/wout/readFA_dev/data/example_CORDEX_attributes.yml"
+cf_data_path = "/dodrio/scratch/users/vsc45263/wout/readFA/data/ALARO_SURFEX_CF_variables.yml" # Path to the file containing the information about the CF-variables
+global_attrs_path = "/dodrio/scratch/users/vsc45263/wout/readFA/data/example_CORDEX_attributes.yml"
 
 # Define time-related parameters
 tstep = 3600 # Time interval (in seconds) to determine the frequency of the processed output. If you, for example, want daily processed output, tstep needs to be equal to 24 * 3600

@@ -17,7 +17,7 @@ module load xarray/2022.6.0-foss-2022a
 module load rasterio/1.3.4-foss-2022a
 module load rioxarray/0.14.0-foss-2022a
 
-export PYTHONPATH="/dodrio/scratch/users/vsc45263/wout/readFA_dev/src:${PYTHONPATH}"
+export PYTHONPATH="/dodrio/scratch/users/vsc45263/wout/readFA/src:${PYTHONPATH}"
 export OMPI_MCA_btl='^uct,ofi'
 export OMPI_MCA_pml='ucx'
 export OMPI_MCA_mtl='^ofi'
