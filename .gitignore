@@ -7,3 +7,4 @@ simulations/log
 doc/LandPrepSurfex_userguide_Amber.pdf
 *.nc
 notebooks/ECOCLIMAP_cover_town_coefficients.csv
+*.png
