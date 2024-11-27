@@ -28,3 +28,5 @@ INPUTFILE=${RUNNAME}_${RSTART}_${NHOURS}_${VARNAME}_${TSTART}_${TSTOP}_${TSTEP}.
 OUTPUTFILE=${RUNNAME}_${RSTART}_${NHOURS}_${VARNAME}_${TSTART}_${TSTOP}_${TSTEP}_regridded.nc
 
 cdo -v remapcon,${GRIDDIR}/belgium_5km_latlon.txt ${INPUTFILE} ${OUTPUTFILE}
+ # remapcon : conservative regridding
+ # remapbil : bilinear regridding
