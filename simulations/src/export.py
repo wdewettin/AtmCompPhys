@@ -7,7 +7,7 @@ import xarray as xr
 ### Define parameters ###
 
 run_name = sys.argv[1]
-cf_var_name_list = ["tas", "pr", "tasmax", "tasmin", "hfls", "hfss", "mrso", "ts", "rnetds", "tsl1", "tsl2", "mrsol1", "mrsol2", "mrsol3", "mrsfl1", "mrsfl2", "gflux"]
+cf_var_name_list = ["tas", "pr", "tasmax", "tasmin", "hfls", "hfss", "mrso", "ts", "rnetds", "tsl1", "tsl2", "mrsol1", "mrsol2", "mrsol3", "mrsfl1", "mrsfl2", "gflux", "evspsbl"]
 teb_var_name_list = ["troad1"]
 if run_name not in ["noTEB", "initSFXnoTEB"]:
     cf_var_name_list += teb_var_name_list
