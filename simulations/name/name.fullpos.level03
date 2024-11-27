@@ -31,7 +31,7 @@
     LSRTM=.FALSE.,
     NMCICA=0,
  /
-&NAMFPD 
+&NAMFPD
     ! NLAT=512, NLON=512,
     ! NFPLUX=499, NFPGUX=499,
     ! RLONC=9.9,
@@ -39,7 +39,7 @@
     ! RDELX=12500.,
     ! RDELY=12500.,
 /
-&NAMFPG 
+&NAMFPG
     ! FPLAT0=49.,
     ! FPLON0=9.9,
     ! BEWARE: to get LINEAR GRID you MUST specify the truncation here.

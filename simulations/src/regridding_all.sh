@@ -19,7 +19,7 @@ GRIDDIR=/dodrio/scratch/users/vsc45263/wout/CompPhys/simulations/src/grids
 INPUTDIRS=$(ls -d /dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/CompPhys/simulations/runs/run_${RUNNAME}_${RSTART}_${NHOURS}/export/*)
 
 for INPUTDIR in $INPUTDIRS
-do 
+do
 cd $INPUTDIR
 
 # Hard-code timestep!

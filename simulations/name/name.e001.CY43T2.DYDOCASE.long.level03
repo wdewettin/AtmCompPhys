@@ -235,7 +235,7 @@
   ! LPC_FULL=.T.      ! (question: Why is this turned off?)
 
   ! (question: are these NH parameters?)
-  ! LGWADV=.T.        
+  ! LGWADV=.T.
   ! LRDBBC=.F.
 /
 &NAMDYNCORE
@@ -334,7 +334,7 @@
   YL_NL%LGPINGP=.F.,    !ALARO-0: liquid cloud water
   YL_NL%LADV=.T.,        !ALARO-0: liquid cloud water
 !  YL_NL%NREQIN=1,           !ALARO-0: liquid cloud water; to by cycled in assim
-  YL_NL%NREQIN=0, 
+  YL_NL%NREQIN=0,
 
 
   YL_NL%LREQOUT=.F.,    !ALARO-0: liquid cloud water; to by cycled in assim
@@ -462,13 +462,13 @@
  ! YDAL_NL%LPC=.T.
  ! YUAL_NL%LPC=.T.
  ! YUNEBH_NL%LPC=.T.
- ! YUOM_NL%LPC=.T.  
- ! YDOM_NL%LPC=.TRUE.,  
+ ! YUOM_NL%LPC=.T.
+ ! YDOM_NL%LPC=.TRUE.,
 
  ! YQ_NL%LPC=.T.,
  ! YTKE_NL%LPC=.T.,
  ! YL_NL%LPC=.T.,
- ! YI_NL%LPC=.T., 
+ ! YI_NL%LPC=.T.,
  ! YR_NL%LPC=.T.,
  ! YS_NL%LPC=.T.,
  ! YSHTUR_NL%LPC=.T.,
@@ -682,7 +682,7 @@ LCOEFK_MSC=.TRUE.          ! use the one from the mass-flux approach
  ETKE_OLAM=0.29,            !ALARO-1 TOUCANS
 
  ! (question: What do these parameters do?)
- 
+
  ETKE_CG01=1.,
  ETKE_CG02=1.,
  ETKE_CG03=1.,

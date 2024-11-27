@@ -32,7 +32,7 @@ MASTER=/dodrio/scratch/projects/starting_2022_075/accord/pack/test43t2_iimpi/bin
 
 # 1b. Environment settings
 # ------------------------
-export PYTHONPATH="" 
+export PYTHONPATH=""
 export OMP_NUM_THREADS=1
 NPROC=$((PBS_NP/OMP_NUM_THREADS))
 
@@ -104,7 +104,7 @@ cat $NAM001 |grep -v '^!'|sed -e "s/!.*//" \
 -e "s/{nstop}/${NSTOP}/g" \
 -e "s/{nfrhis}/${NFRHIS}/g" \
 -e "s/{linc}/${LINC}/g" > fort.4
-cp $NAMSFX ./EXSEG1.nam 
+cp $NAMSFX ./EXSEG1.nam
 
 # RUN!
 mympirun -h $((128/OMP_NUM_THREADS)) ./MASTER > log.out 2>log.err

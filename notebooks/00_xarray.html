@@ -8,9 +8,9 @@
   function addWidgetsRenderer() {
     var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
     var scriptElement = document.createElement('script');
-    
+
     var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
-    
+
     var widgetState;
 
     // Fallback for older version:
@@ -18,9 +18,9 @@
       widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
 
       if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        
+
         var widgetRendererSrc = 'https://unpkg.com/@jupyter-js-widgets@*/dist/embed.js';
-        
+
       }
     } catch(e) {}
 
@@ -22367,7 +22367,7 @@ Attributes:
 
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">':'</span><span class="p">)</span>
 <span class="n">era5_mean_temp</span> <span class="o">=</span> <span class="n">era5</span><span class="p">[</span><span class="s2">"t2m"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
-<span class="n">era5_mean_temp</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> 
+<span class="n">era5_mean_temp</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span>
                            <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
                            <span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'shrink'</span><span class="p">:</span> <span class="mf">0.65</span><span class="p">})</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">();</span>
@@ -24055,7 +24055,7 @@ Attributes:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">era5_renamed</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"2002"</span><span class="p">)</span><span class="o">.</span><span class="n">time</span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">era5_renamed</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"2002"</span><span class="p">)</span><span class="o">.</span><span class="n">time</span>
 </pre></div>
 </div>
 </div>
@@ -28898,7 +28898,7 @@ Attributes:
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">snowfall_1991_2005</span> <span class="o">=</span> <span class="n">era5_renamed</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s2">"1991"</span><span class="p">,</span> <span class="s2">"2005"</span><span class="p">))[</span><span class="s2">"snowfall_m"</span><span class="p">]</span>
 <span class="n">snowfall_yearly</span> <span class="o">=</span> <span class="n">snowfall_1991_2005</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"YE"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
 <span class="n">snowfall_yearly</span> <span class="o">=</span> <span class="n">snowfall_yearly</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">"snowfall_cm"</span><span class="p">)</span>
-<span class="n">snowfall_yearly</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span> <span class="n">col_wrap</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
+<span class="n">snowfall_yearly</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span> <span class="n">col_wrap</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                             <span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"label"</span><span class="p">:</span> <span class="s2">"snowfall (cm)"</span><span class="p">})</span>
 </pre></div>
 </div>

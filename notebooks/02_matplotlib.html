@@ -8,9 +8,9 @@
   function addWidgetsRenderer() {
     var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
     var scriptElement = document.createElement('script');
-    
+
     var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
-    
+
     var widgetState;
 
     // Fallback for older version:
@@ -18,9 +18,9 @@
       widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
 
       if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        
+
         var widgetRendererSrc = 'https://unpkg.com/@jupyter-js-widgets@*/dist/embed.js';
-        
+
       }
     } catch(e) {}
 
@@ -7930,11 +7930,11 @@ a.anchor-link {
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.4'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'power 2'</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.8'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'power 3'</span><span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=-</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.4'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-.'</span><span class="p">)</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=-</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.4'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-.'</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.4'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-.'</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">],</span> <span class="n">y1</span><span class="o">=</span><span class="p">[</span><span class="mf">0.65</span><span class="p">],</span> <span class="n">y2</span><span class="o">=</span><span class="p">[</span><span class="mf">0.75</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.85'</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">'Figure title'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> 
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">'Figure title'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
              <span class="n">fontweight</span><span class="o">=</span><span class="s1">'bold'</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Axes title'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 
@@ -7948,7 +7948,7 @@ a.anchor-link {
         <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">'Text centered at (0.5, 0.5)</span><span class="se">\n</span><span class="s1">in Figure coordinates.'</span><span class="p">,</span>
-        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> 
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
         <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'lower right'</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>

@@ -25,7 +25,7 @@ MASTER=/dodrio/scratch/projects/starting_2022_075/accord/pack/test43t2_iimpi/bin
 
 # 1b. Environment settings
 # ------------------------
-export PYTHONPATH="" 
+export PYTHONPATH=""
 export OMP_NUM_THREADS=1
 NPROC=$((PBS_NP/OMP_NUM_THREADS))
 
@@ -102,8 +102,8 @@ do
 if [[ ! -f ${WORKDIR}/ELSCFABOFALBC${CPLNR_FORMATTED} && ! -f ${SAVEDIR}/${YYYY}/${MM}/ELSCFABOFALBC${CPLNR_FORMATTED} ]]
 then
 
-if [[ ! -d prep ]] 
-then 
+if [[ ! -d prep ]]
+then
 mkdir prep
 fi
 
@@ -196,7 +196,7 @@ ln -sf ${MASTER} ./MASTER
 mympirun -h $((128/OMP_NUM_THREADS)) ./MASTER > log.out 2>log.err
 
 mv PFABOFABOF+0000.sfx ../ICMSHABOFINIT.sfx
-cp const.clim.sfx.ABOF ../Const.Clim.sfx 
+cp const.clim.sfx.ABOF ../Const.Clim.sfx
 cp ecoclimapI_covers_param.bin ../ecoclimapI_covers_param.bin
 cp ecoclimapII_eu_covers_param.bin ../ecoclimapII_eu_covers_param.bin
 

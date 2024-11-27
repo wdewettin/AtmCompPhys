@@ -4,7 +4,7 @@ RUNSDIR=/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wou
 cd $RUNSDIR
 RUNS=$(ls -d *)
 for RUNDIR in $RUNS
-do 
+do
 IFS='_' read -ra RUNDIRPARTS <<< $RUNDIR
 RUNNAME=${RUNDIRPARTS[1]}
 RSTART=${RUNDIRPARTS[2]}

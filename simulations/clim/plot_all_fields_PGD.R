@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 library(Rfa)
 
 pgdfilename <- "/dodrio/scratch/projects/2022_200/project_output/RMIB-UGent/vsc45263_wout/DYDOCASE/runs/long/level04/clim/PGD.fa"

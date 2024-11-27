@@ -25,7 +25,7 @@ MASTER=/dodrio/scratch/projects/starting_2022_075/accord/pack/test43t2_iimpi/bin
 
 # 1b. Environment settings
 # ------------------------
-export PYTHONPATH="" 
+export PYTHONPATH=""
 export OMP_NUM_THREADS=1
 NPROC=$((PBS_NP/OMP_NUM_THREADS))
 
@@ -102,8 +102,8 @@ do
 if [[ ! -f ${WORKDIR}/ELSCFABOFALBC${CPLNR_FORMATTED} && ! -f ${SAVEDIR}/${YYYY}/${MM}/ELSCFABOFALBC${CPLNR_FORMATTED} ]]
 then
 
-if [[ ! -d prep ]] 
-then 
+if [[ ! -d prep ]]
+then
 mkdir prep
 fi
 
@@ -161,7 +161,7 @@ SIMNR_FORMATTED=$(printf "%04d" $SIMNR)
 cp /dodrio/scratch/users/vsc45263/DYDOCASE/runs/long/level03/run199101/output/${YYYY}/${MM}/ICMSHABOF+${SIMNR_FORMATTED}.sfx ICMSHABOFINIT.sfx
 
 # Bring data files
-scp $PGDFILE Const.Clim.sfx 
+scp $PGDFILE Const.Clim.sfx
 scp ${DATADIR_ECOCLIMAP}/*.bin .
 
 fi

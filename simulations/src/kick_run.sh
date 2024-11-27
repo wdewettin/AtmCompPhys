@@ -14,4 +14,3 @@ mkdir -p ${RUNSRCDIR}
 sed -e s/{runname}/$RUNNAME/g -e s/{rstart}/$RSTART/g -e s/{nhours}/$NHOURS/g $TEMPLATE > ${RUNSRCDIR}/run_${RUNNAME}_${RSTART}_${NHOURS}
 
 qsub -e ${LOGDIR}/log_run.err -o ${LOGDIR}/log_run.out -N run_${RUNNAME} ${RUNSRCDIR}/run_${RUNNAME}_${RSTART}_${NHOURS}
-

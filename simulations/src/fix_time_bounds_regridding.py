@@ -17,18 +17,25 @@ for root, dirs, files in os.walk(base_dir):
         rstart = run_info_list[2]
         nhours = int(run_info_list[3])
         print(run_name, rstart, nhours)
-        
+
         # Find all files ending with 'regridded.nc' in the current directory
         for file in files:
             if file.endswith("regridded.nc"):
                 file_path_regridded = os.path.join(root, file)
                 file_path = file_path_regridded[:-13] + ".nc"
 
-                ds_regridded = xr.open_dataset(file_path_regridded, engine="netcdf4", chunks="auto", decode_times=False)
+                ds_regridded = xr.open_dataset(
+                    file_path_regridded,
+                    engine="netcdf4",
+                    chunks="auto",
+                    decode_times=False,
+                )
                 ds_regridded_loaded = ds_regridded.load()
                 ds_regridded.close()
 
-                ds = xr.open_dataset(file_path, engine="netcdf4", chunks="auto", decode_times=False)
+                ds = xr.open_dataset(
+                    file_path, engine="netcdf4", chunks="auto", decode_times=False
+                )
                 time_bnds = ds.time_bnds.load()
                 ds.close()
 
