@@ -11,4 +11,5 @@ notebooks/ECOCLIMAP_cover_town_coefficients.csv
 notebooks/share
 notebooks/_solutions
 notebooks/feedback
-notebooks/.ipynb-checkpoints
+notebooks/.ipynb_checkpoints
+.ipynb_checkpoints
